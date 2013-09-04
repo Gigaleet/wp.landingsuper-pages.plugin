@@ -408,7 +408,7 @@ $xml_file2 = get_post_meta($thePostID, '_lp_xml_form2', true);
 $form_step_js2  = get_post_meta($thePostID, '_lp_form_step_js2', true);
 $form_success_js2  = get_post_meta($thePostID, '_lp_form_form_js2', true);
 
-$thank_you = htmlspecialchars_decode($form_ty ,ENT_QUOTES);
+$thank_you = "<div id='ty'>" .htmlspecialchars_decode($form_ty ,ENT_QUOTES). "</div>";
 $step_success = htmlspecialchars_decode($form_step_js ,ENT_QUOTES);
 $form_success = htmlspecialchars_decode($form_success_js ,ENT_QUOTES);
 $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
