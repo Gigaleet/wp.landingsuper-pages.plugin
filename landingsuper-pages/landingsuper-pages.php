@@ -1531,7 +1531,7 @@ HEREDOC;
                     </div>
                     <div class="sec4_sub1image {$section4_hidden_subimage($section4_image2)} ">
                         <label class="remove_sub_section4-img">Image/Video</label>
-                        <textarea class="textvid" name="e_lp[_section4-image2]">$section1_image4</textarea>
+                        <textarea class="textvid" name="e_lp[_section4-image2]">$section4_image2</textarea>
                     </div>
                     <div class="sec4_sub1link {$section4_hidden_sublink($section4_link2)} ">
                         <label class="remove_sub_section4-link">Link</label>
@@ -1569,7 +1569,7 @@ HEREDOC;
                     </div>
                     <div class="sec4_sub3image {$section4_hidden_subimage($section4_image4)} ">
                         <label class="remove_sub_section4-img">Image/Video</label>
-                        <textarea class="textvid" name="e_lp[_section4-image4]">$section1_image4</textarea>
+                        <textarea class="textvid" name="e_lp[_section4-image4]">$section4_image4</textarea>
                     </div>
                     <div class="sec4_sub3link {$section4_hidden_sublink($section4_link4)} ">
                         <label class="remove_sub_section4-link">Link</label>
@@ -1614,7 +1614,7 @@ HEREDOC;
                     </div>
                     <div class="sec5_sub1image {$section5_hidden_subimage($section5_image2)} ">
                         <label class="remove_sub_section5-img">Image/Video</label>
-                        <textarea class="textvid" name="e_lp[_section5-image2]">$section1_image5</textarea>
+                        <textarea class="textvid" name="e_lp[_section5-image2]">$section5_image2</textarea>
                     </div>
                     <div class="sec5_sub1link {$section5_hidden_sublink($section5_link2)} ">
                         <label class="remove_sub_section5-link">Link</label>
