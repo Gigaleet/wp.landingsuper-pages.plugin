@@ -3,13 +3,13 @@ global $post;
 $thePostID = $post->ID;
 // Get xForms Variables
 $xml_file = get_post_meta($thePostID, '_lp_xml_form', true);
-$form_step_js  = get_post_meta($thePostID, '_lp_form_step_js', true);
-$form_success_js  = get_post_meta($thePostID, '_lp_form_form_js', true);
+$form_step_js  = get_post_meta($thePostID, '_lp_form_js_step', true);
+$form_success_js  = get_post_meta($thePostID, '_lp_form_js_success', true);
 $form_ty  = get_post_meta($thePostID, '_lp_form_ty', true);
 // dual
 $xml_file2 = get_post_meta($thePostID, '_lp_xml_form2', true);
-$form_step_js2  = get_post_meta($thePostID, '_lp_form_step_js2', true);
-$form_success_js2  = get_post_meta($thePostID, '_lp_form_form_js2', true);
+$form_step_js2  = get_post_meta($thePostID, '_lp_form_js_step2', true);
+$form_success_js2  = get_post_meta($thePostID, '_lp_form_js_success2', true);
 
 $thank_you = "<div id='ty'>" .htmlspecialchars_decode($form_ty ,ENT_QUOTES). "</div>";
 $step_success = htmlspecialchars_decode($form_step_js ,ENT_QUOTES);
