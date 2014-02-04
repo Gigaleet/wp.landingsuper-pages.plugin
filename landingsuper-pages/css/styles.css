@@ -1,0 +1,61 @@
+.clear { clear: both; }
+            .lpboxes { padding:0; margin: 0; clear: both; }
+            .lpboxes fieldset { padding: 3px; margin: 0 0 5px 0; border: 1px solid #ddd; display: block; clear: both; }
+            #poststuff .lpboxes h3 { background: none; margin: 15px 0 0 0; float: left; clear: both; padding: 5px; background: #ddd; }
+            .lpboxes label { display: block; float: left; width: 100px; margin: 5px auto; padding: 3px 0 0 0; clear: both; cursor: default; }
+            .lpboxes label span { font-size: 9px; }
+            .lpboxes input[type="text"]{ display: block; min-width: 75%; margin: 5px 0 0 0; }
+            .lpboxes select { display: block; padding: 3px; margin: 5px 0 0 0; }
+            .lpboxes textarea { display: block; width: 75%; height: 100px; margin: 5px 0 0 0; }
+            .lpboxes #editorcontainer textarea { width: 100%; }
+            .lpboxes #quicktags #ed_toolbar { display: none; }
+            .section select { width: 75%; }
+            .sub-section { width: 250px; float: left; margin: 10px 10px 0 0; border: 1px solid #ddd; padding: 5px; }
+            .sub-section h3 { cursor: default; margin: -5px 0 15px -5px !important; width: 100%; }
+            .sub-section label { float: none; margin: 0 0 0 3px; cursor: default; }
+            .sub-section input[type="text"] { width: 100%; }
+            .sub-section select { width: 100%; }
+            .sub-section textarea { width: 100%; }
+            .sublinks { clear: both; margin-top: 10px; display: block;  }
+            .sublinks a { margin-right: 30px; float: left;  }            
+            .remove_linkbox, .remove_section { cursor: pointer; color: red; float: right; }
+            #form_sub {}
+            #form_sub h3 { cursor: pointer; display: inline-block; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-top: 1px solid #ccc; margin: 25px 0 -1px 0 !important; }
+            h3#toggle_ini { float: left;  border-right: none; }
+            h3#toggle_xml { float: none !important; }
+            #subform_ini, #subform_xml { border: 1px solid #ccc; }
+            #dualini_add, #dualxml_add { cursor: pointer; }
+            .textvid { height: 40px !important; }
+            #linkbox_add, #section_add, 
+            #sub-section1_add-title, #sub-section1_add-text, #sub-section1_add-link, #sub-section1_add-img,
+            #sub-section2_add-title, #sub-section2_add-text, #sub-section2_add-link, #sub-section2_add-img,
+            #sub-section3_add-title, #sub-section3_add-text, #sub-section3_add-link, #sub-section3_add-img,
+            #sub-section4_add-title, #sub-section4_add-text, #sub-section4_add-link, #sub-section4_add-img,
+            #sub-section5_add-title, #sub-section5_add-text, #sub-section5_add-link, #sub-section5_add-img,
+            #sub-section6_add-title, #sub-section6_add-text, #sub-section6_add-link, #sub-section6_add-img,
+            #sub-section7_add-title, #sub-section7_add-text, #sub-section7_add-link, #sub-section7_add-img,
+            #sub-section8_add-title, #sub-section8_add-text, #sub-section8_add-link, #sub-section8_add-img,
+            #sub-section9_add-title, #sub-section9_add-text, #sub-section9_add-link, #sub-section9_add-img,
+            #sub-section10_add-title, #sub-section10_add-text, #sub-section10_add-link, #sub-section10_add-img { cursor: pointer; }
+            .remove_sub_section1-title, .remove_sub_section1-text, .remove_sub_section1-link, .remove_sub_section1-img,
+            .remove_sub_section2-title, .remove_sub_section2-text, .remove_sub_section2-link, .remove_sub_section2-img,
+            .remove_sub_section3-title, .remove_sub_section3-text, .remove_sub_section3-link, .remove_sub_section3-img,
+            .remove_sub_section4-title, .remove_sub_section4-text, .remove_sub_section4-link, .remove_sub_section4-img,
+            .remove_sub_section5-title, .remove_sub_section5-text, .remove_sub_section5-link, .remove_sub_section5-img,
+            .remove_sub_section6-title, .remove_sub_section6-text, .remove_sub_section6-link, .remove_sub_section6-img,
+            .remove_sub_section7-title, .remove_sub_section7-text, .remove_sub_section7-link, .remove_sub_section7-img,
+            .remove_sub_section8-title, .remove_sub_section8-text, .remove_sub_section8-link, .remove_sub_section8-img,
+            .remove_sub_section9-title, .remove_sub_section9-text, .remove_sub_section9-link, .remove_sub_section9-img,
+            .remove_sub_section10-title, .remove_sub_section10-text, .remove_sub_section10-link, .remove_sub_section10-img { cursor: pointer !important; }
+            .hidden_lp, .hidden_section, .hidden_sub_section,
+            .hidden_sub1, .hidden_sub2, .hidden_sub3, .hidden_sub4, .hidden_sub5, .hidden_sub6, .hidden_sub7, .hidden_sub8, .hidden_sub9, .hidden_sub10,
+            .hidden_section1_subtitle, .hidden_section1_subtext, .hidden_section1_subimage, .hidden_section1_sublink, 
+            .hidden_section2_subtitle, .hidden_section2_subtext, .hidden_section2_subimage, .hidden_section2_sublink, 
+            .hidden_section3_subtitle, .hidden_section3_subtext, .hidden_section3_subimage, .hidden_section3_sublink, 
+            .hidden_section4_subtitle, .hidden_section4_subtext, .hidden_section4_subimage, .hidden_section4_sublink, 
+            .hidden_section5_subtitle, .hidden_section5_subtext, .hidden_section5_subimage, .hidden_section5_sublink, 
+            .hidden_section6_subtitle, .hidden_section6_subtext, .hidden_section6_subimage, .hidden_section6_sublink, 
+            .hidden_section7_subtitle, .hidden_section7_subtext, .hidden_section7_subimage, .hidden_section7_sublink, 
+            .hidden_section8_subtitle, .hidden_section8_subtext, .hidden_section8_subimage, .hidden_section8_sublink, 
+            .hidden_section9_subtitle, .hidden_section9_subtext, .hidden_section9_subimage, .hidden_section9_sublink, 
+            .hidden_section10_subtitle, .hidden_section10_subtext, .hidden_section10_subimage, .hidden_section10_sublink, .hidden_ini, .hidden_xml { display: none; }
