@@ -1,8 +1,8 @@
-<div>
-    <h2>Link Boxes</h2>
+<div class="link_box_wrap">
+    <h3>Link Boxes</h3>
     <!-- Start Loop -->
     <?php 
-        for($lbc=1; $lbc <= 8; $lbc++) { 
+        for($lbc=1; $lbc <= $total_num_lb; $lbc++) { 
     ?>
     <div class="lpboxes linkbox <?php echo $is_hidden(${'link_box'.$lbc.'_text'}) ?>">
         <h3>Link Box <?php echo $lbc ?></h3>
@@ -15,10 +15,10 @@
             <?php echo $wp_dropdown_pages('echo=0&name=e_lp[_link_box'.$lbc.'-link]&selected='.${'link_box'.$lbc.'_link'}); ?>
             <label>Image</label>
             <input type="text" name="e_lp[_link_box<?php echo $lbc ?>-image]" value="<?php echo ${'link_box'.$lbc.'_image'} ?>"  />
+            <a class="remove_linkbox button">Remove Link Box</a>
         </fieldset>
-        <a class="remove_linkbox">Remove Link Box</a>
     </div>
     <?php } ?>
     <!-- End Loop -->
-    <a id="linkbox_add">Add New Link Box</a>
+    <a id="linkbox_add" class="button button-primary">Add New Link Box</a>
 </div>

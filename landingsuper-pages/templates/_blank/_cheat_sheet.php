@@ -130,7 +130,7 @@
 <?php echo get_post_meta($thePostID, '_section5-title3', true); ?>
 <?php echo get_post_meta($thePostID, '_section5-text3', true); ?>
 <?php echo get_permalink(get_post_meta($thePostID, '_section5-link3', true)); ?>
-<?php echo get_post_meta($thePostID, '_section5-image3', true); ?
+<?php echo get_post_meta($thePostID, '_section5-image3', true); ?>
 <!--sub-->
 <?php echo get_post_meta($thePostID, '_section5-title4', true); ?>
 <?php echo get_post_meta($thePostID, '_section5-text4', true); ?>

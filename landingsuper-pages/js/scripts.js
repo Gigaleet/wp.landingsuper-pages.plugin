@@ -10,9 +10,9 @@ jQuery(document).ready(function($){
             $('.hidden_section:first').removeClass('hidden_section').show();
         });
         $(".remove_section").click(function(){
-            $(this).parent().addClass('hidden_section');
-            $(this).parent().children('fieldset').children('input').val('');
-            $(this).parent().children('fieldset').children('textarea').val('');
+            $(this).parent().parent().addClass('hidden_section');
+            $(this).parent().children('input').val('');
+            $(this).parent().children('textarea').val('');
         });
         function subcheck() {
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
@@ -541,9 +541,9 @@ jQuery(document).ready(function($){
             $('.hidden_lp:first').removeClass('hidden_lp').show();
         });
         $(".remove_linkbox").click(function(){
-            $(this).parent().addClass('hidden_lp');
-            $(this).parent().children('fieldset').children('input').val('');
-            $(this).parent().children('fieldset').children('textarea').val('');
+            $(this).parent().parent().addClass('hidden_lp');
+            $(this).parent().children('input').val('');
+            $(this).parent().children('textarea').val('');
         });
         //Toggle ini
         $('#toggle_ini').click(function(){

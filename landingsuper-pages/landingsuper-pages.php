@@ -29,6 +29,7 @@ function landing_page_meta_box() {
             return ' hidden_lp ';
         }
     }
+    
     //Check to see if the section text have a value; if not set display none
     $section_hidden          = 'section_hidden';
     function section_hidden($sec_val) {
@@ -36,34 +37,37 @@ function landing_page_meta_box() {
             return ' hidden_section ';
         }
     }
+
+    //
     //Check to see if the sub section title have a value; if not set display none
     $section1_hidden_subtitle          = 'section1_hidden_subtitle';
-    function section1_hidden_subtitle($sec_val_tit) {
-        if(!$sec_val_tit || $sec_val_tit == '') {
+    function section1_hidden_subtitle($sec1_val_tit) {
+        if(!$sec1_val_tit || $sec1_val_tit == '') {
             return 'hidden_section1_subtitle';
         }
     }
     //Check to see if the sub section text have a value; if not set display none
     $section1_hidden_subtext          = 'section1_hidden_subtext';
-    function section1_hidden_subtext($sec_val_txt) {
-        if(!$sec_val_txt || $sec_val_txt == '') {
+    function section1_hidden_subtext($sec1_val_txt) {
+        if(!$sec1_val_txt || $sec1_val_txt == '') {
             return 'hidden_section1_subtext';
         }
     }
     //Check to see if the sub section image have a value; if not set display none
     $section1_hidden_subimage          = 'section1_hidden_subimage';
-    function section1_hidden_subimage($sec_val_img) {
-        if(!$sec_val_img || $sec_val_img == '') {
+    function section1_hidden_subimage($sec1_val_img) {
+        if(!$sec1_val_img || $sec1_val_img == '') {
             return 'hidden_section1_subimage';
         }
     }
     //Check to see if the sub section link have a value; if not set display none
     $section1_hidden_sublink          = 'section1_hidden_sublink';
-    function section1_hidden_sublink($sec_val_lnk) {
-        if(!$sec_val_lnk || $sec_val_lnk == '') {
+    function section1_hidden_sublink($sec1_val_lnk) {
+        if(!$sec1_val_lnk || $sec1_val_lnk == '') {
             return 'hidden_section1_sublink';
         }
     }
+
     //
     //Check to see if the sub section title have a value; if not set display none
     $section2_hidden_subtitle          = 'section2_hidden_subtitle';
@@ -325,6 +329,8 @@ function landing_page_meta_box() {
             return 'hidden_section10_sublink';
         }
     }
+
+
     //Check to see if the sub ini has a value; if not set display none
     $subform_hidden_ini          = 'subform_hidden_ini';
     function subform_hidden_ini($ini_val) {
@@ -357,6 +363,14 @@ function landing_page_meta_box() {
             return 'lock_dualxml';
         }
     }
+    $plugin_dir = WP_PLUGIN_URL.'/landingsuper-pages/';
+    // Use these var to adjust the number of Sections, Sub Sections, and Link Boxes **Not fully working**
+    $total_num_sec      =   10;
+    $total_num_sub_sec  =   3;
+    $total_num_lb       =   8;
+    // END
+    $total_num_sub_sec_var  =   $total_num_sub_sec + 1; //Do Not Adjust!!
+    // Template
     $lp_template   = get_post_meta($post_id, '_lp_template', true);
     $lp_template_options    = '';
     $temp_dir            = realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR .'templates';
@@ -367,235 +381,61 @@ function landing_page_meta_box() {
             $lp_template_options .= '<option value="'.$temp_file.'">'.$temp_file.'</option>';
         }
     }
+    // Head
     $lp_logo        = get_post_meta($post_id, '_lp_logo', true);
     $lp_program   = get_post_meta($post_id, '_lp_program', true);
     $lp_slogan_text    = get_post_meta($post_id, '_lp_slogan_text', true);
     $lp_hero_img      = get_post_meta($post_id, '_lp_hero_img', true);
-    $section1_title     = get_post_meta($post_id, '_section1-title', true);
-    $section1_text      = get_post_meta($post_id, '_section1-text', true);
-    $section1_link      = get_post_meta($post_id, '_section1-link', true);
-    $section1_image     = get_post_meta($post_id, '_section1-image', true);
-    $section1_title2     = get_post_meta($post_id, '_section1-title2', true);
-    $section1_text2      = get_post_meta($post_id, '_section1-text2', true);
-    $section1_link2      = get_post_meta($post_id, '_section1-link2', true);
-    $section1_image2     = get_post_meta($post_id, '_section1-image2', true);
-    $section1_title3     = get_post_meta($post_id, '_section1-title3', true);
-    $section1_text3      = get_post_meta($post_id, '_section1-text3', true);
-    $section1_link3      = get_post_meta($post_id, '_section1-link3', true);
-    $section1_image3     = get_post_meta($post_id, '_section1-image3', true);
-    $section1_title4     = get_post_meta($post_id, '_section1-title4', true);
-    $section1_text4      = get_post_meta($post_id, '_section1-text4', true);
-    $section1_link4      = get_post_meta($post_id, '_section1-link4', true);
-    $section1_image4     = get_post_meta($post_id, '_section1-image4', true);
-    $section2_title     = get_post_meta($post_id, '_section2-title', true);
-    $section2_text      = get_post_meta($post_id, '_section2-text', true);
-    $section2_link      = get_post_meta($post_id, '_section2-link', true);
-    $section2_image     = get_post_meta($post_id, '_section2-image', true);
-    $section2_title2     = get_post_meta($post_id, '_section2-title2', true);
-    $section2_text2      = get_post_meta($post_id, '_section2-text2', true);
-    $section2_link2      = get_post_meta($post_id, '_section2-link2', true);
-    $section2_image2     = get_post_meta($post_id, '_section2-image2', true);
-    $section2_title3     = get_post_meta($post_id, '_section2-title3', true);
-    $section2_text3      = get_post_meta($post_id, '_section2-text3', true);
-    $section2_link3      = get_post_meta($post_id, '_section2-link3', true);
-    $section2_image3     = get_post_meta($post_id, '_section2-image3', true);
-    $section2_title4     = get_post_meta($post_id, '_section2-title4', true);
-    $section2_text4      = get_post_meta($post_id, '_section2-text4', true);
-    $section2_link4      = get_post_meta($post_id, '_section2-link4', true);
-    $section2_image4     = get_post_meta($post_id, '_section2-image4', true);
-    $section3_title     = get_post_meta($post_id, '_section3-title', true);
-    $section3_text      = get_post_meta($post_id, '_section3-text', true);
-    $section3_link      = get_post_meta($post_id, '_section3-link', true);
-    $section3_image     = get_post_meta($post_id, '_section3-image', true);
-    $section3_title2     = get_post_meta($post_id, '_section3-title2', true);
-    $section3_text2      = get_post_meta($post_id, '_section3-text2', true);
-    $section3_link2      = get_post_meta($post_id, '_section3-link2', true);
-    $section3_image2     = get_post_meta($post_id, '_section3-image2', true);
-    $section3_title3     = get_post_meta($post_id, '_section3-title3', true);
-    $section3_text3      = get_post_meta($post_id, '_section3-text3', true);
-    $section3_link3      = get_post_meta($post_id, '_section3-link3', true);
-    $section3_image3     = get_post_meta($post_id, '_section3-image3', true);
-    $section3_title4     = get_post_meta($post_id, '_section3-title4', true);
-    $section3_text4      = get_post_meta($post_id, '_section3-text4', true);
-    $section3_link4      = get_post_meta($post_id, '_section3-link4', true);
-    $section3_image4     = get_post_meta($post_id, '_section3-image4', true);
-    $section4_title     = get_post_meta($post_id, '_section4-title', true);
-    $section4_text      = get_post_meta($post_id, '_section4-text', true);
-    $section4_link      = get_post_meta($post_id, '_section4-link', true);
-    $section4_image     = get_post_meta($post_id, '_section4-image', true);
-    $section4_title2     = get_post_meta($post_id, '_section4-title2', true);
-    $section4_text2      = get_post_meta($post_id, '_section4-text2', true);
-    $section4_link2      = get_post_meta($post_id, '_section4-link2', true);
-    $section4_image2     = get_post_meta($post_id, '_section4-image2', true);
-    $section4_title3     = get_post_meta($post_id, '_section4-title3', true);
-    $section4_text3      = get_post_meta($post_id, '_section4-text3', true);
-    $section4_link3      = get_post_meta($post_id, '_section4-link3', true);
-    $section4_image3     = get_post_meta($post_id, '_section4-image3', true);
-    $section4_title4     = get_post_meta($post_id, '_section4-title4', true);
-    $section4_text4      = get_post_meta($post_id, '_section4-text4', true);
-    $section4_link4      = get_post_meta($post_id, '_section4-link4', true);
-    $section4_image4     = get_post_meta($post_id, '_section4-image4', true);
-    $section5_title     = get_post_meta($post_id, '_section5-title', true);
-    $section5_text      = get_post_meta($post_id, '_section5-text', true);
-    $section5_link      = get_post_meta($post_id, '_section5-link', true);
-    $section5_image     = get_post_meta($post_id, '_section5-image', true);
-    $section5_title2     = get_post_meta($post_id, '_section5-title2', true);
-    $section5_text2      = get_post_meta($post_id, '_section5-text2', true);
-    $section5_link2      = get_post_meta($post_id, '_section5-link2', true);
-    $section5_image2     = get_post_meta($post_id, '_section5-image2', true);
-    $section5_title3     = get_post_meta($post_id, '_section5-title3', true);
-    $section5_text3      = get_post_meta($post_id, '_section5-text3', true);
-    $section5_link3      = get_post_meta($post_id, '_section5-link3', true);
-    $section5_image3     = get_post_meta($post_id, '_section5-image3', true);
-    $section5_title4     = get_post_meta($post_id, '_section5-title4', true);
-    $section5_text4      = get_post_meta($post_id, '_section5-text4', true);
-    $section5_link4      = get_post_meta($post_id, '_section5-link4', true);
-    $section5_image4     = get_post_meta($post_id, '_section5-image4', true);
-    $section6_title     = get_post_meta($post_id, '_section6-title', true);
-    $section6_text      = get_post_meta($post_id, '_section6-text', true);
-    $section6_link      = get_post_meta($post_id, '_section6-link', true);
-    $section6_image     = get_post_meta($post_id, '_section6-image', true);
-    $section6_title2     = get_post_meta($post_id, '_section6-title2', true);
-    $section6_text2      = get_post_meta($post_id, '_section6-text2', true);
-    $section6_link2      = get_post_meta($post_id, '_section6-link2', true);
-    $section6_image2     = get_post_meta($post_id, '_section6-image2', true);
-    $section6_title3     = get_post_meta($post_id, '_section6-title3', true);
-    $section6_text3      = get_post_meta($post_id, '_section6-text3', true);
-    $section6_link3      = get_post_meta($post_id, '_section6-link3', true);
-    $section6_image3     = get_post_meta($post_id, '_section6-image3', true);
-    $section6_title4     = get_post_meta($post_id, '_section6-title4', true);
-    $section6_text4      = get_post_meta($post_id, '_section6-text4', true);
-    $section6_link4      = get_post_meta($post_id, '_section6-link4', true);
-    $section6_image4     = get_post_meta($post_id, '_section6-image4', true);
-    $section7_title     = get_post_meta($post_id, '_section7-title', true);
-    $section7_text      = get_post_meta($post_id, '_section7-text', true);
-    $section7_link      = get_post_meta($post_id, '_section7-link', true);
-    $section7_image     = get_post_meta($post_id, '_section7-image', true);
-    $section7_title2     = get_post_meta($post_id, '_section7-title2', true);
-    $section7_text2      = get_post_meta($post_id, '_section7-text2', true);
-    $section7_link2      = get_post_meta($post_id, '_section7-link2', true);
-    $section7_image2     = get_post_meta($post_id, '_section7-image2', true);
-    $section7_title3     = get_post_meta($post_id, '_section7-title3', true);
-    $section7_text3      = get_post_meta($post_id, '_section7-text3', true);
-    $section7_link3      = get_post_meta($post_id, '_section7-link3', true);
-    $section7_image3     = get_post_meta($post_id, '_section7-image3', true);
-    $section7_title4     = get_post_meta($post_id, '_section7-title4', true);
-    $section7_text4      = get_post_meta($post_id, '_section7-text4', true);
-    $section7_link4      = get_post_meta($post_id, '_section7-link4', true);
-    $section7_image4     = get_post_meta($post_id, '_section7-image4', true);
-    $section8_title     = get_post_meta($post_id, '_section8-title', true);
-    $section8_text      = get_post_meta($post_id, '_section8-text', true);
-    $section8_link      = get_post_meta($post_id, '_section8-link', true);
-    $section8_image     = get_post_meta($post_id, '_section8-image', true);
-    $section8_title2     = get_post_meta($post_id, '_section8-title2', true);
-    $section8_text2      = get_post_meta($post_id, '_section8-text2', true);
-    $section8_link2      = get_post_meta($post_id, '_section8-link2', true);
-    $section8_image2     = get_post_meta($post_id, '_section8-image2', true);
-    $section8_title3     = get_post_meta($post_id, '_section8-title3', true);
-    $section8_text3      = get_post_meta($post_id, '_section8-text3', true);
-    $section8_link3      = get_post_meta($post_id, '_section8-link3', true);
-    $section8_image3     = get_post_meta($post_id, '_section8-image3', true);
-    $section8_title4     = get_post_meta($post_id, '_section8-title4', true);
-    $section8_text4      = get_post_meta($post_id, '_section8-text4', true);
-    $section8_link4      = get_post_meta($post_id, '_section8-link4', true);
-    $section8_image4     = get_post_meta($post_id, '_section8-image4', true);
-    $section9_title     = get_post_meta($post_id, '_section9-title', true);
-    $section9_text      = get_post_meta($post_id, '_section9-text', true);
-    $section9_link      = get_post_meta($post_id, '_section9-link', true);
-    $section9_image     = get_post_meta($post_id, '_section9-image', true);
-    $section9_title2     = get_post_meta($post_id, '_section9-title2', true);
-    $section9_text2      = get_post_meta($post_id, '_section9-text2', true);
-    $section9_link2      = get_post_meta($post_id, '_section9-link2', true);
-    $section9_image2     = get_post_meta($post_id, '_section9-image2', true);
-    $section9_title3     = get_post_meta($post_id, '_section9-title3', true);
-    $section9_text3      = get_post_meta($post_id, '_section9-text3', true);
-    $section9_link3      = get_post_meta($post_id, '_section9-link3', true);
-    $section9_image3     = get_post_meta($post_id, '_section9-image3', true);
-    $section9_title4     = get_post_meta($post_id, '_section9-title4', true);
-    $section9_text4      = get_post_meta($post_id, '_section9-text4', true);
-    $section9_link4      = get_post_meta($post_id, '_section9-link4', true);
-    $section9_image4     = get_post_meta($post_id, '_section9-image4', true);
-    $section10_title     = get_post_meta($post_id, '_section10-title', true);
-    $section10_text      = get_post_meta($post_id, '_section10-text', true);
-    $section10_link      = get_post_meta($post_id, '_section10-link', true);
-    $section10_image     = get_post_meta($post_id, '_section10-image', true);
-    $section10_title2     = get_post_meta($post_id, '_section10-title2', true);
-    $section10_text2      = get_post_meta($post_id, '_section10-text2', true);
-    $section10_link2      = get_post_meta($post_id, '_section10-link2', true);
-    $section10_image2     = get_post_meta($post_id, '_section10-image2', true);
-    $section10_title3     = get_post_meta($post_id, '_section10-title3', true);
-    $section10_text3      = get_post_meta($post_id, '_section10-text3', true);
-    $section10_link3      = get_post_meta($post_id, '_section10-link3', true);
-    $section10_image3     = get_post_meta($post_id, '_section10-image3', true);
-    $section10_title4     = get_post_meta($post_id, '_section10-title4', true);
-    $section10_text4      = get_post_meta($post_id, '_section10-text4', true);
-    $section10_link4      = get_post_meta($post_id, '_section10-link4', true);
-    $section10_image4     = get_post_meta($post_id, '_section10-image4', true);
-    $link_box1_title     = get_post_meta($post_id, '_link_box1-title', true);
-    $link_box1_text      = get_post_meta($post_id, '_link_box1-text', true);
-    $link_box1_link      = get_post_meta($post_id, '_link_box1-link', true);
-    $link_box1_image     = get_post_meta($post_id, '_link_box1-image', true);
-    $link_box2_title     = get_post_meta($post_id, '_link_box2-title', true);
-    $link_box2_text      = get_post_meta($post_id, '_link_box2-text', true);
-    $link_box2_link      = get_post_meta($post_id, '_link_box2-link', true);
-    $link_box2_image     = get_post_meta($post_id, '_link_box2-image', true);
-    $link_box3_title     = get_post_meta($post_id, '_link_box3-title', true);
-    $link_box3_text      = get_post_meta($post_id, '_link_box3-text', true);
-    $link_box3_link      = get_post_meta($post_id, '_link_box3-link', true);
-    $link_box3_image     = get_post_meta($post_id, '_link_box3-image', true);
-    $link_box4_title     = get_post_meta($post_id, '_link_box4-title', true);
-    $link_box4_text      = get_post_meta($post_id, '_link_box4-text', true);
-    $link_box4_link      = get_post_meta($post_id, '_link_box4-link', true);
-    $link_box4_image     = get_post_meta($post_id, '_link_box4-image', true);
-    $link_box5_title     = get_post_meta($post_id, '_link_box5-title', true);
-    $link_box5_text      = get_post_meta($post_id, '_link_box5-text', true);
-    $link_box5_link      = get_post_meta($post_id, '_link_box5-link', true);
-    $link_box5_image     = get_post_meta($post_id, '_link_box5-image', true);
-    $link_box6_title     = get_post_meta($post_id, '_link_box6-title', true);
-    $link_box6_text      = get_post_meta($post_id, '_link_box6-text', true);
-    $link_box6_link      = get_post_meta($post_id, '_link_box6-link', true);
-    $link_box6_image     = get_post_meta($post_id, '_link_box6-image', true);
-    $link_box7_title     = get_post_meta($post_id, '_link_box7-title', true);
-    $link_box7_text      = get_post_meta($post_id, '_link_box7-text', true);
-    $link_box7_link      = get_post_meta($post_id, '_link_box7-link', true);
-    $link_box7_image     = get_post_meta($post_id, '_link_box7-image', true);
-    $link_box8_title     = get_post_meta($post_id, '_link_box8-title', true);
-    $link_box8_text      = get_post_meta($post_id, '_link_box8-text', true);
-    $link_box8_link      = get_post_meta($post_id, '_link_box8-link', true);
-    $link_box8_image     = get_post_meta($post_id, '_link_box8-image', true);
+    // Sections
+    for($s=1; $s <= $total_num_sec; $s++) {
+        ${'section'.$s.'_title'}     = get_post_meta($post_id, '_section'.$s.'-title', true);
+        ${'section'.$s.'_text'}      = get_post_meta($post_id, '_section'.$s.'-text', true);
+        ${'section'.$s.'_link'}      = get_post_meta($post_id, '_section'.$s.'-link', true);
+        ${'section'.$s.'_image'}     = get_post_meta($post_id, '_section'.$s.'-image', true);
+        for($ss=2; $ss <= $total_num_sub_sec_var; $ss++) {
+            ${'section'.$s.'_title'.$ss}     = get_post_meta($post_id, '_section'.$s.'-title'.$ss, true);
+            ${'section'.$s.'_text'.$ss}      = get_post_meta($post_id, '_section'.$s.'-text'.$ss, true);
+            ${'section'.$s.'_link'.$ss}      = get_post_meta($post_id, '_section'.$s.'-link'.$ss, true);
+            ${'section'.$s.'_image'.$ss}     = get_post_meta($post_id, '_section'.$s.'-image'.$ss, true);
+        }
+    }
+    // Link Boxes
+    for($lb=1; $lb <= $total_num_lb; $lb++) {
+        ${'link_box'.$lb.'_title'}     = get_post_meta($post_id, '_link_box'.$lb.'-title', true);
+        ${'link_box'.$lb.'_text'}      = get_post_meta($post_id, '_link_box'.$lb.'-text', true);
+        ${'link_box'.$lb.'_link'}      = get_post_meta($post_id, '_link_box'.$lb.'-link', true);
+        ${'link_box'.$lb.'_image'}     = get_post_meta($post_id, '_link_box'.$lb.'-image', true);
+    }
+    // Quote and Footer
     $lp_quote_text           = get_post_meta($post_id, '_lp_quote_text', true);
     $lp_footer     = get_post_meta($post_id, '_lp_footer', true);
+    // Form
     $lp_form_header      = get_post_meta($post_id, '_lp_form_header', true);
     $lp_form_copy       = get_post_meta($post_id, '_lp_form_copy', true);
     $lp_form_head_scripts       = get_post_meta($post_id, '_lp_form_head_scripts', true);
     $lp_form_thankyou  = get_post_meta($post_id, '_lp_form_ty', true);
+    // INI
     $lp_ini_form        = get_post_meta($post_id, '_lp_ini_form', true);
     $lp_form_js    = get_post_meta($post_id, '_lp_form_js', true);
     $lp_ini_form2        = get_post_meta($post_id, '_lp_ini_form2', true);
+    // XML
     $lp_xml_form       = get_post_meta($post_id, '_lp_xml_form', true);
     $lp_form_js_step    = get_post_meta($post_id, '_lp_form_js_step', true);
     $lp_form_js_success    = get_post_meta($post_id, '_lp_form_js_success', true);
     $lp_xml_form2       = get_post_meta($post_id, '_lp_xml_form2', true);
     $lp_form_js_step2    = get_post_meta($post_id, '_lp_form_js_step2', true);
     $lp_form_js_success2    = get_post_meta($post_id, '_lp_form_js_success2', true);
-
-    $plugin_dir = WP_PLUGIN_URL.'/landingsuper-pages/';
 ?>
-
     <link rel="stylesheet" href="<?php echo $plugin_dir ?>css/styles.css" type="text/css" media="screen" />
     <script type="text/javascript" src="<?php echo $plugin_dir ?>js/scripts.js"></script>
-
 <?php
-
     include( 'blocks/header.php' ); 
-    //include( 'blocks/navigation.php' );   
     include( 'blocks/section.php' );
     include( 'blocks/linkbox.php' );
     include( 'blocks/leadform.php' );
     include( 'blocks/quote.php' );
     include( 'blocks/footer.php' );
-
-} //end meta box fields display  --------------------------------------------------------------------------------------------
+} //end meta box fields display 
 
 function save_landing_page_meta_box($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
@@ -624,10 +464,14 @@ function add_clone_landing_page_box() {
 
 function clone_landing_page_box() {
     global $wpdb;
+    $post_id        = $_GET['post'];
+    global $current_user;
+    get_currentuserinfo();
+    $clone_author   = $current_user->ID;
+    include( 'blocks/page_clone.php' );
 ?>
-<script type="text/javascript">
+    <script type="text/javascript">
     jQuery(document).ready(function($){
-
         jQuery('#submit_clone').click(function(){
             var action_url = '<?php bloginfo('url'); ?>/wp-content/plugins/landingsuper-pages/ajax_clone.php';
             form_data = {};
@@ -642,27 +486,12 @@ function clone_landing_page_box() {
                     jQuery('#clone_message').text("Page Cloned: "+form_data['clone_title']);
                 }
             });
-
             return false;
         });
     });
-</script>
+    </script>
 <?php
-    $post_id        = $_GET['post'];
-    global $current_user;
-    get_currentuserinfo();
-    $clone_author   = $current_user->ID;
-    $clone_box      = <<<HEREDOC
-            <input type="hidden" name="cloned_id"  id="cloned_id" value="$post_id" />
-            <input type="hidden" name="cloned_author"  id="cloned_author" value="$clone_author" />
-            <label>Page Title</label><input type="text" name="clone_title" size="15" id="clone_title"  />
-            <input type="submit" class="button-secondary" name="submit_clone" id="submit_clone" value="Clone" />
-            <div style="clear: both"></div>
-            <p id="clone_message" style="color: red"></p>
-HEREDOC;
-    echo $clone_box;
 }
-
 add_action('admin_menu', 'add_clone_landing_page_box');
 
 
@@ -683,7 +512,6 @@ function show_lp() {
         die();
     }
 }
-
 add_action('template_redirect', 'show_lp');
 
 
@@ -706,7 +534,6 @@ function remove_landing_page_from_nav($pages) {
             $excluded_ids[] = $lp_id[0];
         }
         $length = count($pages);
-
         // Loop though the $pages array and actually unset/delete stuff
         for ( $i=0; $i<$length; $i++ ) {
             $page = & $pages[$i];
@@ -722,10 +549,10 @@ function remove_landing_page_from_nav($pages) {
     }
     return $pages;
 }
-
 add_filter('get_pages', 'remove_landing_page_from_nav');
-
 register_deactivation_hook(__FILE__, 'e_landing_page_deactivation');
+
+
 function e_lp_deactivation() {
     //do something
 }

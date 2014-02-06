@@ -1,8 +1,8 @@
-<div>
-    <h2>Sections</h2>
+<div class="sections_wrap">
+    <h3>Sections</h3>
     <!-- Start Loop -->
     <?php 
-        for($c=1; $c <= 10; $c++) { 
+        for($c=1; $c <= $total_num_sec; $c++) { 
     ?>
     <div class="lpboxes section <?php echo $section_hidden(${'section'.$c.'_text'}) ?>">
         <h3>Section <?php echo $c ?></h3>
@@ -15,17 +15,17 @@
             <input type="text" name="e_lp[_section<?php echo $c ?>-image]" value="<?php echo ${'section'.$c.'_image'} ?>" />
             <label>Page Link</label>
             <?php echo $wp_dropdown_pages('echo=0&name=e_lp[_section'.$c.'-link]&selected='.${'section'.$c.'_link'}) ?>
-            <div>
+            <div class="sub_sec_wrap">
                 <h3>Sub Sections</h3>
                 <ul class="sublinks">
-                    <li id="sub-section<?php echo $c ?>_add-title">Add Title</li>
-                    <li id="sub-section<?php echo $c ?>_add-text">Add Text Box</li>
-                    <li id="sub-section<?php echo $c ?>_add-img">Add Image/Video</li>
-                    <li id="sub-section<?php echo $c ?>_add-link">Add Link</li>
+                    <li id="sub-section<?php echo $c ?>_add-title" class="button button-primary">Add Title</li>
+                    <li id="sub-section<?php echo $c ?>_add-text" class="button button-primary">Add Text Box</li>
+                    <li id="sub-section<?php echo $c ?>_add-img" class="button button-primary">Add Image/Video</li>
+                    <li id="sub-section<?php echo $c ?>_add-link" class="button button-primary">Add Link</li>
                     <div class="clear"></div>
                 </ul>
                 <!-- Start 2nd Loop -->
-                <?php for($cc=1, $ccc=2; $cc <= 3; $cc++, $ccc++) { ?>
+                <?php for($cc=1, $ccc=2; $cc <= $total_num_sub_sec; $cc++, $ccc++) { ?>
                 <div id="section<?php echo $c ?>_sub<?php echo $cc ?>" class="sub-section sec<?php echo $c ?>_sub<?php echo $cc ?>">
                     <h3>Sub Section <?php echo $cc ?></h3>
                     <div class="sec<?php echo $c ?>_sub<?php echo $cc ?>titles <?php echo ${'section'.$c.'_hidden_subtitle'}(${'section'.$c.'_title'.$ccc}) ?>">
@@ -50,10 +50,10 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
+            <a class="remove_section button">Remove Section</a>
         </fieldset>
-        <a class="remove_section">Remove Section</a>
     </div>
     <?php } ?>
     <!-- End Loop -->
-    <a id="section_add">Add New Section</a>
+    <a id="section_add" class="button button-primary">Add New Section</a>
 </div>
