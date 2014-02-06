@@ -1,6 +1,6 @@
 <div class="lpboxes">
     <h3>Quote Area</h3>
     <fieldset>
-        <textarea name="e_lp[_lp_quote_text]"><?php echo $lp_quote_text ?></textarea>
+        <?php wp_editor( htmlspecialchars_decode($lp_quote_text), 'wp_wysiwyg_editor_quote', $settings = array('textarea_name'=>'e_lp[_lp_quote_text]') ); ?>
     </fieldset>
 </div>

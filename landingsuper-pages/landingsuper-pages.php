@@ -366,7 +366,7 @@ function landing_page_meta_box() {
     $plugin_dir = WP_PLUGIN_URL.'/landingsuper-pages/';
     // Use these var to adjust the number of Sections, Sub Sections, and Link Boxes **Not fully working**
     $total_num_sec      =   10;
-    $total_num_sub_sec  =   3;
+    $total_num_sub_sec  =   4;
     $total_num_lb       =   8;
     // END
     $total_num_sub_sec_var  =   $total_num_sub_sec + 1; //Do Not Adjust!!

@@ -33,6 +33,12 @@ jQuery(document).ready(function($){
             }else{
                 $('.sec1_sub3').removeClass('hidden_sub1');
             };
+            //Check to see if all inputs and textareas in sub4 are empty; if so display none
+            if ($('.sec1_sub4titles').hasClass('hidden_section1_subtitle') && $('.sec1_sub4text').hasClass('hidden_section1_subtext') && $('.sec1_sub4image').hasClass('hidden_section1_subimage') && $('.sec1_sub4link').hasClass('hidden_section1_sublink')){
+                $('.sec1_sub4').addClass('hidden_sub1');
+            }else{
+                $('.sec1_sub4').removeClass('hidden_sub1');
+            };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
             if ($('.sec2_sub1titles').hasClass('hidden_section2_subtitle') && $('.sec2_sub1text').hasClass('hidden_section2_subtext') && $('.sec2_sub1image').hasClass('hidden_section2_subimage') && $('.sec2_sub1link').hasClass('hidden_section2_sublink')){
@@ -51,6 +57,12 @@ jQuery(document).ready(function($){
                 $('.sec2_sub3').addClass('hidden_sub2');
             }else{
                 $('.sec2_sub3').removeClass('hidden_sub2');
+            };
+            //Check to see if all inputs and textareas in sub4 are empty; if so display none
+            if ($('.sec2_sub4titles').hasClass('hidden_section2_subtitle') && $('.sec2_sub4text').hasClass('hidden_section2_subtext') && $('.sec2_sub4image').hasClass('hidden_section2_subimage') && $('.sec2_sub4link').hasClass('hidden_section2_sublink')){
+                $('.sec2_sub4').addClass('hidden_sub2');
+            }else{
+                $('.sec2_sub4').removeClass('hidden_sub2');
             };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
@@ -71,6 +83,12 @@ jQuery(document).ready(function($){
             }else{
                 $('.sec3_sub3').removeClass('hidden_sub3');
             };
+            //Check to see if all inputs and textareas in sub4 are empty; if so display none
+            if ($('.sec3_sub4titles').hasClass('hidden_section3_subtitle') && $('.sec3_sub4text').hasClass('hidden_section3_subtext') && $('.sec3_sub4image').hasClass('hidden_section3_subimage') && $('.sec3_sub4link').hasClass('hidden_section3_sublink')){
+                $('.sec3_sub4').addClass('hidden_sub3');
+            }else{
+                $('.sec3_sub4').removeClass('hidden_sub3');
+            };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
             if ($('.sec4_sub1titles').hasClass('hidden_section4_subtitle') && $('.sec4_sub1text').hasClass('hidden_section4_subtext') && $('.sec4_sub1image').hasClass('hidden_section4_subimage') && $('.sec4_sub1link').hasClass('hidden_section4_sublink')){
@@ -89,6 +107,12 @@ jQuery(document).ready(function($){
                 $('.sec4_sub3').addClass('hidden_sub4');
             }else{
                 $('.sec4_sub3').removeClass('hidden_sub4');
+            };
+            //Check to see if all inputs and textareas in sub4 are empty; if so display none
+            if ($('.sec4_sub4titles').hasClass('hidden_section4_subtitle') && $('.sec4_sub4text').hasClass('hidden_section4_subtext') && $('.sec4_sub4image').hasClass('hidden_section4_subimage') && $('.sec4_sub4link').hasClass('hidden_section4_sublink')){
+                $('.sec4_sub4').addClass('hidden_sub4');
+            }else{
+                $('.sec4_sub4').removeClass('hidden_sub4');
             };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
@@ -109,6 +133,12 @@ jQuery(document).ready(function($){
             }else{
                 $('.sec5_sub3').removeClass('hidden_sub5');
             };
+            //Check to see if all inputs and textareas in sub5 are empty; if so display none
+            if ($('.sec5_sub4titles').hasClass('hidden_section5_subtitle') && $('.sec5_sub4text').hasClass('hidden_section5_subtext') && $('.sec5_sub4image').hasClass('hidden_section5_subimage') && $('.sec5_sub4link').hasClass('hidden_section5_sublink')){
+                $('.sec5_sub4').addClass('hidden_sub5');
+            }else{
+                $('.sec5_sub4').removeClass('hidden_sub5');
+            };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
             if ($('.sec6_sub1titles').hasClass('hidden_section6_subtitle') && $('.sec6_sub1text').hasClass('hidden_section6_subtext') && $('.sec6_sub1image').hasClass('hidden_section6_subimage') && $('.sec6_sub1link').hasClass('hidden_section6_sublink')){
@@ -127,6 +157,12 @@ jQuery(document).ready(function($){
                 $('.sec6_sub3').addClass('hidden_sub6');
             }else{
                 $('.sec6_sub3').removeClass('hidden_sub6');
+            };
+            //Check to see if all inputs and textareas in sub6 are empty; if so display none
+            if ($('.sec6_sub4titles').hasClass('hidden_section6_subtitle') && $('.sec6_sub4text').hasClass('hidden_section6_subtext') && $('.sec6_sub4image').hasClass('hidden_section6_subimage') && $('.sec6_sub4link').hasClass('hidden_section6_sublink')){
+                $('.sec6_sub4').addClass('hidden_sub6');
+            }else{
+                $('.sec6_sub4').removeClass('hidden_sub6');
             };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
@@ -147,6 +183,12 @@ jQuery(document).ready(function($){
             }else{
                 $('.sec7_sub3').removeClass('hidden_sub7');
             };
+            //Check to see if all inputs and textareas in sub7 are empty; if so display none
+            if ($('.sec7_sub4titles').hasClass('hidden_section7_subtitle') && $('.sec7_sub4text').hasClass('hidden_section7_subtext') && $('.sec7_sub4image').hasClass('hidden_section7_subimage') && $('.sec7_sub4link').hasClass('hidden_section7_sublink')){
+                $('.sec7_sub4').addClass('hidden_sub7');
+            }else{
+                $('.sec7_sub4').removeClass('hidden_sub7');
+            };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
             if ($('.sec8_sub1titles').hasClass('hidden_section8_subtitle') && $('.sec8_sub1text').hasClass('hidden_section8_subtext') && $('.sec8_sub1image').hasClass('hidden_section8_subimage') && $('.sec8_sub1link').hasClass('hidden_section8_sublink')){
@@ -165,6 +207,12 @@ jQuery(document).ready(function($){
                 $('.sec8_sub3').addClass('hidden_sub8');
             }else{
                 $('.sec8_sub3').removeClass('hidden_sub8');
+            };
+            //Check to see if all inputs and textareas in sub8 are empty; if so display none
+            if ($('.sec8_sub4titles').hasClass('hidden_section8_subtitle') && $('.sec8_sub4text').hasClass('hidden_section8_subtext') && $('.sec8_sub4image').hasClass('hidden_section8_subimage') && $('.sec8_sub4link').hasClass('hidden_section8_sublink')){
+                $('.sec8_sub4').addClass('hidden_sub8');
+            }else{
+                $('.sec8_sub4').removeClass('hidden_sub8');
             };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
@@ -185,6 +233,12 @@ jQuery(document).ready(function($){
             }else{
                 $('.sec9_sub3').removeClass('hidden_sub9');
             };
+            //Check to see if all inputs and textareas in sub9 are empty; if so display none
+            if ($('.sec9_sub4titles').hasClass('hidden_section9_subtitle') && $('.sec9_sub4text').hasClass('hidden_section9_subtext') && $('.sec9_sub4image').hasClass('hidden_section9_subimage') && $('.sec9_sub4link').hasClass('hidden_section9_sublink')){
+                $('.sec9_sub4').addClass('hidden_sub9');
+            }else{
+                $('.sec9_sub4').removeClass('hidden_sub9');
+            };
             //
             //Check to see if all inputs and textareas in sub1 are empty; if so display none
             if ($('.sec10_sub1titles').hasClass('hidden_section10_subtitle') && $('.sec10_sub1text').hasClass('hidden_section10_subtext') && $('.sec10_sub1image').hasClass('hidden_section10_subimage') && $('.sec10_sub1link').hasClass('hidden_section10_sublink')){
@@ -203,6 +257,12 @@ jQuery(document).ready(function($){
                 $('.sec10_sub3').addClass('hidden_sub10');
             }else{
                 $('.sec10_sub3').removeClass('hidden_sub10');
+            };
+            //Check to see if all inputs and textareas in sub10 are empty; if so display none
+            if ($('.sec10_sub4titles').hasClass('hidden_section10_subtitle') && $('.sec10_sub4text').hasClass('hidden_section10_subtext') && $('.sec10_sub4image').hasClass('hidden_section10_subimage') && $('.sec10_sub4link').hasClass('hidden_section10_sublink')){
+                $('.sec10_sub4').addClass('hidden_sub10');
+            }else{
+                $('.sec10_sub4').removeClass('hidden_sub10');
             };
         }
         setInterval(subcheck, 100);
