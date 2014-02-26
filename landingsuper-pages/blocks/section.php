@@ -18,10 +18,10 @@
             <div class="sub_sec_wrap">
                 <h3>Sub Sections</h3>
                 <ul class="sublinks">
-                    <li id="sub-section<?php echo $c ?>_add-title" class="button button-primary">Add Title</li>
-                    <li id="sub-section<?php echo $c ?>_add-text" class="button button-primary">Add Text Box</li>
-                    <li id="sub-section<?php echo $c ?>_add-img" class="button button-primary">Add Image/Video</li>
-                    <li id="sub-section<?php echo $c ?>_add-link" class="button button-primary">Add Link</li>
+                    <li id="sub-section<?php echo $c ?>_add-title" class="button">Add Title</li>
+                    <li id="sub-section<?php echo $c ?>_add-text" class="button">Add Text Box</li>
+                    <li id="sub-section<?php echo $c ?>_add-img" class="button">Add Image/Video</li>
+                    <li id="sub-section<?php echo $c ?>_add-link" class="button">Add Link</li>
                     <div class="clear"></div>
                 </ul>
                 <!-- Start 2nd Loop -->
