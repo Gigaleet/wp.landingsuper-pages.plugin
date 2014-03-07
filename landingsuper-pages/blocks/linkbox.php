@@ -4,7 +4,7 @@
     <?php 
         for($lbc=1; $lbc <= $total_num_lb; $lbc++) { 
     ?>
-    <div class="lpboxes linkbox <?php echo $is_hidden(${'link_box'.$lbc.'_text'}) ?>">
+    <div class="lpboxes linkbox <?php echo $is_hidden(${'link_box'.$lbc.'_title'}, ${'link_box'.$lbc.'_text'}) ?>">
         <h3>Link Box <?php echo $lbc ?></h3>
         <fieldset>
             <label>Title</label>

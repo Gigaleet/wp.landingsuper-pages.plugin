@@ -24,16 +24,16 @@ function landing_page_meta_box() {
     $wp_dropdown_pages  = 'wp_dropdown_pages';
     $is_hidden          = 'is_hidden';
     //Check to see if the link box text have a value; if not set display none
-    function is_hidden($is_val) {
-        if(!$is_val || $is_val == '') {
+    function is_hidden($lb_tit, $lb_txt) {
+        if(!$lb_tit && !$lb_txt || $lb_tit == '' && $lb_txt == '') {
             return ' hidden_lp ';
         }
     }
     
     //Check to see if the section text have a value; if not set display none
     $section_hidden          = 'section_hidden';
-    function section_hidden($sec_val) {
-        if(!$sec_val || $sec_val == '') {
+    function section_hidden($sec_tit, $sec_txt) {
+        if(!$sec_tit && !$sec_txt || $sec_tit == '' && $sec_txt == '') {
             return ' hidden_section ';
         }
     }

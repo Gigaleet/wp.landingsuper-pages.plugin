@@ -4,7 +4,7 @@
     <?php 
         for($c=1; $c <= $total_num_sec; $c++) { 
     ?>
-    <div class="lpboxes section <?php echo $section_hidden(${'section'.$c.'_text'}) ?>">
+    <div class="lpboxes section <?php echo $section_hidden(${'section'.$c.'_title'}, ${'section'.$c.'_text'}) ?>">
         <h3>Section <?php echo $c ?></h3>
         <fieldset>
             <label>Title</label>
