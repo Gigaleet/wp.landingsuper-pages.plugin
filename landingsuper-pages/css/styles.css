@@ -1,7 +1,7 @@
 /*General*/
 .clear { clear: both; }
 /*LP Boxes*/
-.lpboxes { padding:0; margin: 0; clear: both; overflow: hidden; }
+.lpboxes { padding:0; margin: 0; clear: both; overflow: hidden; min-width: 0px; max-height: auto; }
 .lpboxes fieldset { padding: 3px; margin: 0 0 5px 0; border: 1px solid #ddd; display: block; clear: both; background: #ffffff; padding: 10px; }
 #poststuff .lpboxes h3 { background: none; margin: 15px 0 0 0; float: left; clear: both; padding: 5px; background: #ddd; width: 100%; }
 .lpboxes label { display: block; float: left; width: 100px; margin: 5px auto; padding: 3px 0 0 0; clear: both; cursor: default; }
@@ -39,28 +39,16 @@
 .linkbox { margin: 10px 0; }
 .linkbox fieldset { background-color: #f9f9f9; padding: 10px; }
 .linkbox > h3 { margin: 0 !important; }
-.remove_linkbox, .remove_section { cursor: pointer; float: right; margin-top: 10px !important; }
+.remove_linkbox, .remove_section, .remove_dualform { cursor: pointer; float: right; margin-top: 10px !important; }
 /*Form*/
-#form_sub { margin: 10px; }
-#form_sub h3 { cursor: pointer; display: inline-block; margin: 25px 0 -1px 0 !important; }
+#subform_dualxml {  }
+#subform_dualxml h3 { cursor: pointer; display: inline-block; margin: 15px 0 -1px 0 !important }
+#subform_dualxml fieldset { padding: 10px; background-color: #f9f9f9; }
 .fromlinks { clear: both; margin: 10px; display: block;  }
 .formlinks li { margin-right: 10px !important; float: left; }
-h3#toggle_ini { float: left;  border-right: none; }
 h3#toggle_xml { float: none !important; }
-#subform_ini, #subform_xml { border: 1px solid #ccc; background-color: #f9f9f9; border: 1px solid #ccc; margin: 15px 0; overflow: hidden; }
-.inner_pad {  padding: 10px;  }
-#subform_ini > h3, #subform_xml > h3 { margin: 0 0 10px 0 !important; cursor: default !important; width: 100% }
-#dualini_add, #dualxml_add { cursor: pointer; }
-
-.hidden_lp, .hidden_section, .hidden_sub_section,
-.hidden_sub1, .hidden_sub2, .hidden_sub3, .hidden_sub4, .hidden_sub5, .hidden_sub6, .hidden_sub7, .hidden_sub8, .hidden_sub9, .hidden_sub10,
-.hidden_section1_subtitle, .hidden_section1_subtext, .hidden_section1_subimage, .hidden_section1_sublink, 
-.hidden_section2_subtitle, .hidden_section2_subtext, .hidden_section2_subimage, .hidden_section2_sublink, 
-.hidden_section3_subtitle, .hidden_section3_subtext, .hidden_section3_subimage, .hidden_section3_sublink, 
-.hidden_section4_subtitle, .hidden_section4_subtext, .hidden_section4_subimage, .hidden_section4_sublink, 
-.hidden_section5_subtitle, .hidden_section5_subtext, .hidden_section5_subimage, .hidden_section5_sublink, 
-.hidden_section6_subtitle, .hidden_section6_subtext, .hidden_section6_subimage, .hidden_section6_sublink, 
-.hidden_section7_subtitle, .hidden_section7_subtext, .hidden_section7_subimage, .hidden_section7_sublink, 
-.hidden_section8_subtitle, .hidden_section8_subtext, .hidden_section8_subimage, .hidden_section8_sublink, 
-.hidden_section9_subtitle, .hidden_section9_subtext, .hidden_section9_subimage, .hidden_section9_sublink, 
-.hidden_section10_subtitle, .hidden_section10_subtext, .hidden_section10_subimage, .hidden_section10_sublink, .hidden_ini, .hidden_xml { display: none; }
+#subform_xml { border: 1px solid #ccc; background-color: #f9f9f9; border: 1px solid #ccc; margin: 15px 0; overflow: hidden; }
+#subform_xml > h3 { margin: 0 0 10px 0 !important; cursor: default !important; width: 100% }
+#dualxml_add { cursor: pointer; margin-top: 15px; }
+/*Hidden*/
+.hidden_lp, .hidden_section, .hidden_sub_section, .hidden_xml { display: none; }

@@ -4,7 +4,7 @@
     <?php 
         for($c=1; $c <= $total_num_sec; $c++) { 
     ?>
-    <div class="lpboxes section <?php echo $section_hidden(${'section'.$c.'_title'}, ${'section'.$c.'_text'}) ?>">
+    <div class="lpboxes section <?php echo $section_hidden(${'section'.$c.'_title'}, ${'section'.$c.'_text'}) ?>" id="Section<?php echo $c ?>">
         <h3>Section <?php echo $c ?></h3>
         <fieldset>
             <label>Title</label>
@@ -18,30 +18,30 @@
             <div class="sub_sec_wrap">
                 <h3>Sub Sections</h3>
                 <ul class="sublinks">
-                    <li id="sub-section<?php echo $c ?>_add-title" class="button">Add Title</li>
-                    <li id="sub-section<?php echo $c ?>_add-text" class="button">Add Text Box</li>
-                    <li id="sub-section<?php echo $c ?>_add-img" class="button">Add Image/Video</li>
-                    <li id="sub-section<?php echo $c ?>_add-link" class="button">Add Link</li>
+                    <li class="add_sub_sec  button" id="sub-section<?php echo $c ?>_add-title">Add Title</li>
+                    <li class="add_sub_sec button" id="sub-section<?php echo $c ?>_add-text">Add Text Box</li>
+                    <li class="add_sub_sec button" id="sub-section<?php echo $c ?>_add-img">Add Image/Video</li>
+                    <li class="add_sub_sec button" id="sub-section<?php echo $c ?>_add-link">Add Link</li>
                     <div class="clear"></div>
                 </ul>
                 <!-- Start 2nd Loop -->
                 <?php for($cc=1, $ccc=2; $cc <= $total_num_sub_sec; $cc++, $ccc++) { ?>
                 <div id="section<?php echo $c ?>_sub<?php echo $cc ?>" class="sub-section sec<?php echo $c ?>_sub<?php echo $cc ?>">
                     <h3>Sub Section <?php echo $cc ?></h3>
-                    <div class="sec<?php echo $c ?>_sub<?php echo $cc ?>titles <?php echo ${'section'.$c.'_hidden_subtitle'}(${'section'.$c.'_title'.$ccc}) ?>">
-                        <label class="remove_sub_section<?php echo $c ?>-title">Title</label>
+                    <div class="sub-section<?php echo $c ?>_add-title sec<?php echo $c ?>_sub<?php echo $cc ?>titles <?php echo $gen_is_hidden(${'section'.$c.'_title'.$ccc}) ?>">
+                        <label class="remove_sub_sec">Title</label>
                         <input type="text" name="e_lp[_section<?php echo $c ?>-title<?php echo $ccc ?>]" value="<?php echo ${'section'.$c.'_title'.$ccc} ?>" />
                     </div>
-                    <div class="sec<?php echo $c ?>_sub<?php echo $cc ?>text <?php echo ${'section'.$c.'_hidden_subtext'}(${'section'.$c.'_text'.$ccc}) ?> ">
-                        <label class="remove_sub_section<?php echo $c ?>-text">Text</label>
+                    <div class="sub-section<?php echo $c ?>_add-text sec<?php echo $c ?>_sub<?php echo $cc ?>text <?php echo $gen_is_hidden(${'section'.$c.'_text'.$ccc}) ?> ">
+                        <label class="remove_sub_sec">Text</label>
                         <textarea name="e_lp[_section<?php echo $c ?>-text<?php echo $ccc ?>]"><?php echo ${'section'.$c.'_text'. $ccc} ?></textarea>
                     </div>
-                    <div class="sec<?php echo $c ?>_sub<?php echo $cc ?>image <?php echo ${'section'.$c.'_hidden_subimage'}(${'section'.$c.'_image'.$ccc}) ?> ">
-                        <label class="remove_sub_section<?php echo $c ?>-img">Image/Video</label>
+                    <div class="sub-section<?php echo $c ?>_add-img sec<?php echo $c ?>_sub<?php echo $cc ?>image <?php echo $gen_is_hidden(${'section'.$c.'_image'.$ccc}) ?> ">
+                        <label class="remove_sub_sec">Image/Video</label>
                         <textarea class="textvid" name="e_lp[_section<?php echo $c ?>-image<?php echo $ccc ?>]"><?php echo ${'section'.$c.'_image'. $ccc} ?></textarea>
                     </div>
-                    <div class="sec<?php echo $c ?>_sub<?php echo $cc ?>link <?php echo ${'section'.$c.'_hidden_sublink'}(${'section'.$c.'_link'.$ccc}) ?> ">
-                        <label class="remove_sub_section<?php echo $c ?>-link">Link</label>
+                    <div class="sub-section<?php echo $c ?>_add-link sec<?php echo $c ?>_sub<?php echo $cc ?>link <?php echo $gen_is_hidden(${'section'.$c.'_link'.$ccc}) ?> ">
+                        <label class="remove_sub_sec">Link</label>
                         <input type="text" name="e_lp[_section<?php echo $c ?>-link<?php echo $ccc ?>]" value="<?php echo ${'section'.$c.'_link'.$ccc} ?>" />
                     </div>                    
                 </div>
@@ -50,7 +50,7 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
-            <a class="remove_section button">Remove Section</a>
+            <a class="remove_section button" title="Remove Section">Remove Section</a>
         </fieldset>
     </div>
     <?php } ?>
